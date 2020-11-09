@@ -1,1 +1,4 @@
 build
+cache
+
+static/node_modules
