@@ -10,3 +10,5 @@ docker build -t gonote .
 # run test
 docker run -it --rm -P gonote
 ```
+
+部署在`heroku`: https://kawail.herokuapp.com
