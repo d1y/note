@@ -1,6 +1,9 @@
 package env
 
-import "os"
+import (
+	"os"
+	"strconv"
+)
 
 // Mode 模式
 //
@@ -37,6 +40,16 @@ func GetMode() Mode {
 	default:
 		return DebugCode
 	}
+}
+
+// GetPort 获取端口
+func GetPort() int {
+	var port = os.Getenv("PORT")
+	if port == "" {
+		return 2333
+	}
+	var p, _ = strconv.Atoi(port)
+	return p
 }
 
 func init() {

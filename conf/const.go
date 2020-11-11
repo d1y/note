@@ -3,6 +3,8 @@
 
 package conf
 
+import "github.com/d1y/note/utils/env"
+
 // Version 版本号
 const Version = "0.0.1"
 
@@ -13,7 +15,7 @@ const Author = "d1y"
 const Mail = "chenhonzhou@gmail.com"
 
 // ExposePort 端口
-const ExposePort = 2333
+var ExposePort = 2333
 
 // ReservedKeywords 保留关键字
 var ReservedKeywords = []string{
@@ -26,3 +28,7 @@ const WebPrefix = "note"
 
 // DatabaseName 数据库名
 const DatabaseName = "note"
+
+func init() {
+	ExposePort = env.GetPort()
+}

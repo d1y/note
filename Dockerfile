@@ -35,4 +35,4 @@ ENV APP_ENV=release
 
 CMD [ "./note.app" ]
 
-EXPOSE 2333
+EXPOSE $PORT
