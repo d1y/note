@@ -1,0 +1,12 @@
+spring:
+  profile: dev
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/github
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 2333
